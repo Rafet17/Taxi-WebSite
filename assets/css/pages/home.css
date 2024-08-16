@@ -1,0 +1,138 @@
+.home {
+    position: relative;
+    top: -1.8%;
+}
+
+.home-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.home-img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.car-holder {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.car-holder img {
+    z-index: 2;
+}
+
+.car-holder .shape {
+    position: absolute;
+    right: 120px;
+    top: 0;
+    height: 100%;
+    width: 450px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    transform: skew(-20deg, 0deg);
+    overflow: hidden;
+}
+
+.car-holder .shape div {
+    background-color: #222;
+    width: 100px;
+    height: 80%;
+    z-index: 1;
+}
+
+.car-holder .shape div:nth-child(2) {
+    background-color: #ff9900;
+    width: 200px;
+    height: 100%;
+}
+
+.car-holder .shape div:nth-child(3) {
+    background-color: #222;
+    width: 100px;
+    height: 80%;
+    margin-bottom: 30%;
+}
+
+.home .content-wrap {
+    height: 600px;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.caption.medium {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.caption.big {
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.caption.small {
+    font-size: 18px;
+    line-height: 28px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+
+/* !------------------------------------------------------ */
+
+/** Media Queries start */
+
+@media screen and (max-width:900px) {
+    .car-holder {
+        display: none;
+    }
+
+    .caption.medium{
+        font-size: 16px;
+    }
+
+    .caption.big{
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .caption.small{
+        font-size: 18px;
+        line-height: 18px;
+        padding:0 25px 0 0;
+        width: 90%;
+    }
+
+    .caption.small br{
+        display: none;
+    }
+
+    .home .content{
+        padding: 0 0 60px 15px;
+    }
+}
+
+/** Media Queries end */

@@ -1,6 +1,9 @@
 let searchBox = document.querySelector("#popup-search-box");
 let sideBox = document.querySelector(".popup-sidebox");
 const stickyHeader = document.querySelector(".sticky-header");
+const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+const mobileMenu = document.querySelector(".header-menu-wrap");
+const mobileMenuClose = document.querySelector(".mobile-menu-close");
 
 //popup search
 document.querySelector(".search-icon").onclick = () => {
@@ -49,6 +52,33 @@ document.addEventListener('DOMContentLoaded', function () {
         mainHeader.offsetHeight = scrollTop;
     });
 });
+
+mobileMenuIcon.addEventListener('click', () =>{
+    mobileMenu.classList.toggle("open")
+})
+
+//*----------------ANIMATIONS----------------/
+
+function animation(){
+    let controller = new ScrollMagic.Controller();
+    const t1 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+
+    t1.fromTo(".car-holder img", 1, { x: "25rem"}, { x: 0});
+    t1.fromTo(".caption.medium", 1.1, {y:"4rem", opacity:0}, {y:0, opacity:1}, "-=1");
+    t1.fromTo(".caption.big", 1.2, {y:"5rem", opacity:0}, {y:0, opacity:1}, "-=1");
+    t1.fromTo(".caption.small", 1.3, {y:"6rem", opacity:0}, {y:0, opacity:1}, "-=1");
+    t1.fromTo(".button", 1.4, {y:"7rem", opacity:0}, {y:0, opacity:1, stagger: 0.5}, "-=1");
+    t1.fromTo(".slide-in-bottom", 1.3, {y:"25rem"}, {y:0}, "-=1");
+    t1.fromTo(".fad-in", 1.3, {opacity:0}, {opacity:1}, "-=1");
+    t1.fromTo(".slide-in-top", 1.3, {y:"-25rem"}, {y:0}, "-=1");
+}
+
+
+animation();
+    
+
+ 
+   
 
 
 
