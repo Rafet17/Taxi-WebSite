@@ -96,6 +96,36 @@ animation();
 
 
 
+let swiperCards = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween:30,
+    grabCursor:true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    breakpoints:{
+        900:{
+            slidesPerView: 3
+        }
+    }
+  });
+  
+
+
+
+
+
 
 
 

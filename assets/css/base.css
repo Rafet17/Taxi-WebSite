@@ -19,7 +19,6 @@ body {
     position: relative;
     overflow-x: hidden;
     background: var(--bs-white);
-    height: 200vh;
 }
 
 a {
