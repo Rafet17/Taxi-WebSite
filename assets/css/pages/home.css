@@ -586,12 +586,29 @@ figure {
     transition-delay: .3s;
 }
 
+.service-item:hover .service-shape{
+    height: 200px;  
+}
+
+.service-item:hover .service-shape:before {
+    height: 160px;
+}
+
+.service-item:hover .service-shape:after {
+    height: 140px;
+}
+
 .service-car {
     position: absolute;
     right: -30px;
     bottom: -30px;
     max-width: 230px;
     transition: all .3s cubic-bezier(.165, .85, .45, 1);
+}
+
+.service-item:hover .service-car {
+    bottom: -35px;
+    right: 0;
 }
 
 .service-content {
