@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+
     <!--* GOOGLE FONT CDN (SPACE GROTESTK) -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 
     <!--* ICONSCOUT CDN  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    
 
     <!--* SWIPER JS CDN  -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -457,11 +461,11 @@
                         </div>
                     </div>
                     <!-- If we need pagination -->
-                    
+
                     <!-- If we need navigation buttons -->
-                    
+
                 </div>
-                
+
                 <div class="swiper-pagination"></div>
             </div>
         </div>
@@ -473,7 +477,104 @@
 
     <!-- ! Booking section start -->
 
-    <section class="booking" id="booking"></section>
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="row pos-relative padding">
+                <div class="col-lg-4">
+                    <div class="booking-car"></div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="booking-wrap">
+                        <div class="booking-heading">
+                            <h4>
+                                <span></span>
+                                Online Booking
+                            </h4>
+                            <h2 class="white">Book Your Taxi Ride</h2>
+                        </div>
+                        <form action="" id="book-taxi-ride">
+                            <div class="booking-form">
+                                <div class="form-field">
+                                    <i class="uil uil-user"></i>
+                                    <input type="text" id="full-name" name="full-name" class="form-control"
+                                        placeholder="Your Name">
+                                </div>
+                                <div class="form-field">
+                                    <i class="uil uil-envelope-open"></i>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email"
+                                        required>
+                                </div>
+                                <div class="form-field">
+                                    <i class="uil uil-tag-alt"></i>
+                                    <select name="package-type" id="type" class="niceSelect" style="display: none;">
+                                        <option value="standard">Standard</option>
+                                        <option value="business">Business</option>
+                                        <option value="economy">Economy</option>
+                                        <option value="vip-spacial">VIP Spacial</option>
+                                        <option value="comfort">Comfort</option>
+                                    </select>
+                                    <div class="nice-select niceSelect" tabindex="0">
+                                        <span class="current">Standart</span>
+                                        <ul class="list">
+                                            <li data-value="standard selected" class="option">Standard</li>
+                                            <li data-value="business" class="option">Business</li>
+                                            <li data-value="economy" class="option">Economy</li>
+                                            <li data-value="vip-spacial" class="option">VIP Spacial</li>
+                                            <li data-value="comfort" class="option">Comfort</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <i class="uil uil-users-alt"></i>
+                                    <select name="package-type" id="type" class="niceSelect" style="display: none;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <div class="nice-select niceSelect" tabindex="0">
+                                        <span class="current">1 Person</span>
+                                        <ul class="list">
+                                            <li data-value="1" class="option selected focus">1 Person</li>
+                                            <li data-value="2" class="option">2 Person</li>
+                                            <li data-value="3" class="option">3 Person</li>
+                                            <li data-value="4" class="option">4 Person</li>
+                                            <li data-value="5" class="option">5 Person</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <i class="uil uil-map-marker"></i>
+                                    <input type="text" id="start-dest" name="start-dest" class="form-control"
+                                        placeholder="Start Destination" required>
+                                </div>
+                                <div class="form-field">
+                                    <i class="uil uil-map-marker"></i>
+                                    <input type="text" id="end-dest" name="end-dest" class="form-control"
+                                        placeholder="End Destination" required>
+                                </div>
+                                <div class="form-field">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    <input type="text" id="ride-date" name="ride-date" class="form-control date-picker"
+                                        placeholder="Select Date" required>
+                                </div>
+                                <div class="form-field">
+                                    <i class="uil uil-clock-five"></i>
+                                    <input type="text" id="ride-time" name="ride-time" class="form-control time-picker"
+                                        placeholder="Select Time" required>
+                                </div>
+                                <div class="form-field">
+                                    <button id="submit" class="btn" type="submit">Book Your Taxi</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- ! Booking section end -->
 
@@ -492,8 +593,6 @@
 
     <!--* SWIPER JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
         integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="

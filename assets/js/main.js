@@ -165,6 +165,10 @@ let swiperCards = new Swiper('.mySwiper', {
         }
     }
   });
+
+  
+
+
   
 
 
