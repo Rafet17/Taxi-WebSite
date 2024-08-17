@@ -4,18 +4,55 @@ const stickyHeader = document.querySelector(".sticky-header");
 const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
 const mobileMenu = document.querySelector(".header-menu-wrap");
 const mobileMenuClose = document.querySelector(".mobile-menu-close");
+let searchIcon =document.querySelectorAll(".search-icon");
 
 
 
 
 //popup search
-document.querySelector(".search-icon").onclick = () => {
-    searchBox.classList.toggle("active")
-}
 
-document.querySelector(".search-close").onclick = () => {
+
+let mainSearchIcon = document.querySelector(".main-header .search-icon");
+let stickySearchIcon = document.querySelector(".sticky-header .search-icon");
+
+// main-header'daki search-icon'a tıklama olayı ekle
+mainSearchIcon.addEventListener("click", function () {
+    searchBox.classList.toggle("active");
+});
+
+// sticky-header'daki search-icon'a tıklama olayı ekle
+stickySearchIcon.addEventListener("click", function () {
+    searchBox.classList.toggle("active");
+});
+
+
+searchIcon.onclick = () => {
     searchBox.classList.remove("active")
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".sticky-header .search-icon").onclick = () => {
+        searchBox.classList.toggle("active");
+    };
+});
+
+const observer = new MutationObserver((mutationsList, observer) => {
+    for(let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            // Örneğin sticky header DOM'a eklendikten sonra event listener ekleme.
+            if (document.querySelector(".sticky-header")) {
+                observer.disconnect(); // Gözlemlemeyi durdur.
+                // Buraya event listener'ları ekleyin.
+            }
+        }
+    }
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+
+
+
 
 //popup sidebox
 document.querySelector(".sidebox-icon").onclick = () => {
@@ -32,6 +69,8 @@ document.addEventListener('click', function (event) {
     }
 });
 
+
+
 window.onscroll = () => {
     sideBox.classList.remove("active");
 }
@@ -46,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (scrollTop > mainHeader.offsetHeight) {
             stickyHeader.classList.add('sticky-fixed-top');
             stickyHeader.style.transform = 'translateY(0)';
+            
 
         }
         else if (scrollTop < mainHeader.offsetHeight) {
@@ -55,6 +95,11 @@ document.addEventListener('DOMContentLoaded', function () {
         mainHeader.offsetHeight = scrollTop;
     });
 });
+
+
+
+
+
 
 mobileMenuIcon.addEventListener('click', () => {
     mobileMenu.classList.toggle("open")

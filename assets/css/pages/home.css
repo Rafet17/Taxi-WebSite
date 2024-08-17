@@ -674,4 +674,35 @@ figure {
     z-index: -1;
 }
 
+
+/** Media Queries start */
+
+@media screen and (max-width:900px) {
+    .service.padding{
+        padding: 30px 15px;
+    }
+
+    .service-heading h2 {
+        font-size: 25px;
+        line-height: normal;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        display: block;
+        margin: 0 0 10px;
+    }
+    
+    .service .service-heading p {
+        color: #ddd;
+        margin-bottom: 15px;
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    .service .service-heading p br{
+        display: none;
+    }
+
+    
+}
+
 /* ! Service end */
