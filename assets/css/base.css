@@ -93,6 +93,39 @@ ul {
     transform: translateX(0);
 }
 
+.span-heading{
+    background-color: #ff9900;
+    transform: skew(-20deg, 0deg);
+    display: inline-flex;
+    width: 4px;
+    height: 15px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.span-heading::before{
+    background-color: #ff9900;
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    right: 8px;
+    top: 0;
+    opacity: 0.8;
+}
+
+.span-heading::after{
+    background-color: #ff9900;
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    opacity: 0.5;
+}
+
 
 
 /* ! base css end */

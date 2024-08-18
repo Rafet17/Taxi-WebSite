@@ -14,3 +14,6 @@
 
 /* ! Pages Css */
 @import url(pages/home.css);
+
+/* ! responsive Css */
+@import url(responsive.css);

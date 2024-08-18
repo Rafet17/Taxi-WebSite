@@ -1,0 +1,167 @@
+/** Home Media Queries start */
+
+@media screen and (max-width:900px) {
+    .car-holder {
+        display: none;
+    }
+
+    .caption.medium {
+        font-size: 16px;
+    }
+
+    .caption.big {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .caption.small {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 0 25px 0 0;
+        width: 90%;
+    }
+
+    .caption.small br {
+        display: none;
+    }
+
+    .home .content {
+        padding: 0 0 60px 15px;
+    }
+}
+
+/** Home Media Queries end */
+
+
+/* !------------------------------------------------------ */
+
+
+/** About Media Queries start */
+
+@media screen and (max-width:900px) {
+    .about.padding {
+        padding: 30px 0;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+        padding-left: 15px;
+    }
+
+    .about-image::before {
+        background: #ff9900;
+        border-radius: 2px;
+        transform: skew(-20deg, 0deg);
+        content: "";
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        right: 100px;
+        bottom: -80px;
+        z-index: -1;
+    }
+
+    .about-image {
+        padding-top: 55px;
+
+    }
+
+    .about-image .about-img1 {
+        max-width: 240px;
+    }
+
+    .about-image .about-img2 {
+        right: 15px;
+        bottom: 1px;
+    }
+
+    .round-text {
+        top: 150px;
+    }
+
+    .about-info-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/** About Media Queries end */
+
+
+/* !------------------------------------------------------ */
+
+
+/** Service Media Queries start */
+
+@media screen and (max-width:900px) {
+    .service.padding{
+        padding: 30px 15px;
+    }
+
+    .service-heading h2 {
+        font-size: 25px;
+        line-height: normal;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        display: block;
+        margin: 0 0 10px;
+    }
+    
+    .service .service-heading p {
+        color: #ddd;
+        margin-bottom: 15px;
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    .service .service-heading p br{
+        display: none;
+    }
+
+    
+}
+
+/** Service Media Queries end */
+
+
+/* !------------------------------------------------------ */
+
+
+/** Booking Media Queries start */
+
+@media screen and (max-width:900px){
+
+    .booking::before{
+        display: none;
+    }
+
+    .booking:after{
+        display: none;
+    }
+
+    .padding {
+        padding: 50px 15px;
+    }
+
+    .booking-heading h2{
+        font-size: 24px;
+    }
+
+    .booking-form{
+        grid-template-columns: 1fr;
+    }
+
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .col-lg-4{
+        display: none;
+    }
+}
+
+
+/** Booking Media Queries end */
