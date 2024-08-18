@@ -21,12 +21,37 @@ body {
     background: var(--bs-white);
 }
 
+p {
+    font-size: 17px;
+    line-height: 27px;
+    margin-bottom: 15px;
+}
+
 a {
+    color: #222;
+}
+
+a,
+a:hover {
     text-decoration: none;
 }
 
+a:focus {
+    outline: 0;
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    outline: none;
+    max-width: 100%;
+}
+
 ul {
+    display: block;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .container {

@@ -96,7 +96,7 @@
 /** Service Media Queries start */
 
 @media screen and (max-width:900px) {
-    .service.padding{
+    .service.padding {
         padding: 30px 15px;
     }
 
@@ -108,7 +108,7 @@
         display: block;
         margin: 0 0 10px;
     }
-    
+
     .service .service-heading p {
         color: #ddd;
         margin-bottom: 15px;
@@ -116,11 +116,11 @@
         line-height: normal;
     }
 
-    .service .service-heading p br{
+    .service .service-heading p br {
         display: none;
     }
 
-    
+
 }
 
 /** Service Media Queries end */
@@ -131,13 +131,13 @@
 
 /** Booking Media Queries start */
 
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
 
-    .booking::before{
+    .booking::before {
         display: none;
     }
 
-    .booking:after{
+    .booking:after {
         display: none;
     }
 
@@ -145,11 +145,11 @@
         padding: 50px 15px;
     }
 
-    .booking-heading h2{
+    .booking-heading h2 {
         font-size: 24px;
     }
 
-    .booking-form{
+    .booking-form {
         grid-template-columns: 1fr;
     }
 
@@ -158,10 +158,68 @@
         width: 100%;
     }
 
-    .col-lg-4{
+    .col-lg-4 {
         display: none;
     }
+
 }
 
 
 /** Booking Media Queries end */
+
+
+/* !------------------------------------------------------ */
+
+
+/** Pricing Media Queries start */
+
+@media screen and (max-width:900px) {
+
+    .pricing.padding {
+        padding: 50px 0;
+    }
+
+    .tab-wrapper {
+        grid-template-columns: 1fr;
+        padding: 30px 15px 0;
+    }
+
+    .pricing-heading h2 {
+        font-size: 24px;
+    }
+
+    .pricing-heading p {
+        font-size: 17px;
+        line-height: normal;
+        margin-bottom: 0;
+        padding: 0 10px;
+    }
+
+    .pricing-heading p br {
+        display: none;
+    }
+
+    .pricing-tab-menu li:not(:last-of-type):before {
+        background-color: #ccc;
+        width: 15px;
+        height: 2px;
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 51%;
+        transform: translateY(0);
+    }
+
+    .pricing-tab-menu li:not(:last-of-type) {
+        padding-right: 30px;
+        padding-left: 10px;
+    }
+
+    .pricing-tab-menu li:nth-child(2) {
+        padding-left: 20px;
+    }
+}
+
+/** Pricing Media Queries end */
+
+/* !------------------------------------------------------ */
