@@ -54,7 +54,7 @@
 }
 
 .car-holder .shape div {
-    background-color: #222;
+    background-color: var(--bs-dark);
     width: 100px;
     height: 80%;
     z-index: 1;
@@ -67,7 +67,7 @@
 }
 
 .car-holder .shape div:nth-child(3) {
-    background-color: #222;
+    background-color: var(--bs-dark);
     width: 100px;
     height: 80%;
     margin-bottom: 30%;
@@ -82,24 +82,36 @@
 .caption.medium {
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
     text-transform: capitalize;
     margin-bottom: 20px;
+}
+
+.caption.medium h4 {
+
+    color: var(--bs-white);
 }
 
 .caption.big {
     font-size: 36px;
     line-height: 60px;
     font-weight: 700;
-    color: #fff;
+    color: var(--bs-white);
     margin-bottom: 20px;
+}
+
+.caption.big h1 {
+    color: var(--bs-white);
 }
 
 .caption.small {
     font-size: 18px;
     line-height: 28px;
-    color: #ddd;
+
     margin-bottom: 20px;
+}
+
+.caption.small h5 {
+    color: #ddd;
 }
 
 /* ! Home end */
@@ -214,8 +226,6 @@ figure {
 .about-heading p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 17px;
-    line-height: 27px;
 }
 
 .about-info-text {
@@ -239,22 +249,13 @@ figure {
 
 .about-info-text .owner h4 {
     font-size: 17px;
-    font-weight: 600;
     line-height: 1;
-    color: #666;
+    color: var(--bs-gray);
     display: block;
 }
 
 .about-info-text .owner .signature {
     width: 140px;
-}
-
-.about-info-text li h2 {
-    font-size: 32px;
-    line-height: 42px;
-    margin: 0 0 10px;
-    font-weight: 600;
-    letter-spacing: -1px;
 }
 
 .about-info-text li h2 a {
@@ -268,7 +269,7 @@ figure {
     font-size: 17px;
     font-weight: 500;
     line-height: 1;
-    color: #666;
+    color: var(--bs-gray);
     display: block;
     margin-bottom: 5px;
 }
@@ -338,18 +339,15 @@ figure {
     font-weight: 700;
     letter-spacing: -1.5px;
     display: block;
-    margin: 0 0 10px;
 }
 
 .service-heading h2.white {
-    color: #fff;
+    color: var(--bs-white);
 }
 
 .service .service-heading p {
     color: #ddd;
     margin-bottom: 0;
-    font-size: 17px;
-    line-height: 27px;
 }
 
 .service-item-wrapper {
@@ -400,7 +398,7 @@ figure {
 }
 
 .service-shape:before {
-    background-color: #222;
+    background-color: var(--bs-dark);
     border-radius: 2px;
     content: "";
     width: 80px;
@@ -414,7 +412,7 @@ figure {
 }
 
 .service-shape:after {
-    background-color: #222;
+    background-color: var(--bs-dark);
     border-radius: 2px;
     content: "";
     width: 40px;
@@ -453,7 +451,7 @@ figure {
 }
 
 .service-content {
-    background-color: #fff;
+    background-color: var(--bs-white);
     padding: 30px;
     text-align: start;
 }
@@ -462,21 +460,14 @@ figure {
     font-size: 22px;
     line-height: 1.3;
     font-weight: 700;
-    margin: 0 0 10px;
-    color: #222;
-    letter-spacing: -0.5px;
 }
 
-.service-content h3 a {
-    color: #222;
-}
+
 
 .service-content p {
     margin-bottom: 20px;
-    font-size: 17px;
-    line-height: 27px;
     margin-top: 0;
-    color: #666;
+    color: var(--bs-gray);
 }
 
 .service-content .read-more {
@@ -485,7 +476,7 @@ figure {
     border-radius: 2px;
     font-size: 15px;
     font-weight: 500;
-    color: #fff;
+    color: var(--bs-gray);
     display: inline-block;
     height: 35px;
     padding: 0 23px 0 20px;
@@ -507,7 +498,7 @@ figure {
 }
 
 .service-content .read-more:before {
-    background-color: #222;
+    background-color: var(--bs-dark);
     content: "";
     width: 0;
     height: 100%;
@@ -530,7 +521,7 @@ figure {
     background-image: url(../../images/texture.png);
     background-repeat: repeat;
     background-size: cover;
-    background-color: #222;
+    background-color: var(--bs-dark);
     position: relative;
     z-index: 1;
     height: 100% !important;
@@ -608,25 +599,20 @@ figure {
     z-index: -1;
 }
 
-
-
 .booking-heading {
     margin-bottom: 30px;
 }
 
 .booking-heading h4 {
-    font-size: 16px;
     color: var(--bs-orange);
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-flex;
     align-items: center;
-    font-weight: 600;
-    line-height: 1.7;
 }
 
 .booking-heading h2 {
-    color: #fff;
+    color: var(--bs-white);
     font-size: 40px;
     line-height: 52px;
     font-weight: 700;
@@ -651,8 +637,8 @@ figure {
 
 .booking-form .niceSelect .current,
 .booking-form .form-field input {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--bs-gray-dark);
+    color: var(--bs-white);
     border-radius: 2px;
     width: 100%;
     height: 50px;
@@ -661,7 +647,7 @@ figure {
     line-height: 50px;
     box-shadow: none;
     outline: none;
-    border: 1px solid #333;
+    border: 1px solid var(--bs-gray-dark);
 }
 
 .booking-form .form-field i {
@@ -682,7 +668,7 @@ figure {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: #fff;
+    background-color: var(--bs-white);
     background-clip: padding-box;
     border: 1px solid #ced4da;
     -webkit-appearance: none;
@@ -698,7 +684,7 @@ figure {
     width: 100%;
     height: auto;
     font-size: 17px;
-    color: #fff;
+    color: var(--bs-white);
 }
 
 select {
@@ -707,7 +693,7 @@ select {
 
 .nice-select {
     -webkit-tap-highlight-color: transparent;
-    background-color: #fff;
+    background-color: var(--bs-white);
     border-radius: 5px;
     border: solid 1px #e8e8e8;
     box-sizing: border-box;
@@ -740,8 +726,8 @@ select {
     line-height: 50px;
     display: block;
     padding: 0 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--bs-gray-dark);
+    color: var(--bs-white);
     border-radius: 2px;
     width: 100%;
     height: 50px;
@@ -750,16 +736,16 @@ select {
     line-height: 50px;
     box-shadow: none;
     outline: none;
-    border: 1px solid #333;
+    border: 1px solid var(--bs-gray-dark);
 }
 
 .booking-form .niceSelect .list {
-    background-color: #333;
+    background-color: var(--bs-gray-dark);
     width: 100%;
     border-radius: 0;
     margin-top: -2px;
     border: none;
-    background-color: #fff;
+    background-color: var(--bs-white);
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(68, 68, 68, .11);
     box-sizing: border-box;
@@ -836,8 +822,8 @@ select {
 
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box>div>div:hover,
 .xdsoft_datetimepicker .xdsoft_calendar td:hover {
-    background: #222 !important;
-    color: #fff;
+    background: var(--bs-dark) !important;
+    color: var(--bs-white);
 }
 
 /* ! Booking end */
@@ -853,7 +839,7 @@ select {
 }
 
 .pricing.bd-bottom {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--bs-light);
 }
 
 .pricing.bd-grey {
@@ -866,15 +852,11 @@ select {
 }
 
 .pricing-heading h4 {
-    font-size: 16px;
     color: var(--bs-orange);
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-flex;
     align-items: center;
-    margin: 0 0 10px;
-    font-weight: 600;
-    line-height: 1.7;
 }
 
 .pricing-heading h2 {
@@ -883,13 +865,9 @@ select {
     font-weight: 700;
     letter-spacing: -1.5px;
     display: block;
-    color: #222;
-    margin: 0 0 10px;
 }
 
 .pricing-heading p {
-    font-size: 17px;
-    line-height: 27px;
     margin-bottom: 0;
 }
 
@@ -928,24 +906,24 @@ select {
 .pricing-tab-menu li .nav-link {
     font-size: 17px;
     font-weight: 500;
-    color: #999;
+    color: #b1acac;
     padding: 0;
 }
 
 .pricing-tab-menu li .nav-link:hover,
 .pricing-tab-menu li .nav-link.active {
-    color: #222;
+    color: var(--bs-dark);
 }
 
-.tab-wrapper{
+.tab-wrapper {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.3rem;
     padding-top: 30px;
 }
 
 .pricing-item {
-    background-color: #fff;
+    background-color: var(--bs-white);
     padding: 0;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -994,18 +972,18 @@ select {
     z-index: 1;
 }
 
-.pricing-car img{
+.pricing-car img {
     border: none;
     outline: none;
     max-width: 100%;
 }
 
 .pricing-car .price {
-    background-color: #ff9900;
+    background-color: var(--bs-orange);
     clip-path: polygon(85% 0%, 100% 30%, 100% 100%, 0 100%, 0 0);
     font-size: 20px;
     font-weight: 700;
-    color: #222;
+    color: var(--bs-dark);
     padding: 10px 15px 10px 25px;
     position: absolute;
     right: 40px;
@@ -1023,11 +1001,7 @@ select {
     line-height: 1;
     display: block;
     margin: 0;
-    
-}
 
-.pricing-head h3 a{
-    color: #222;
 }
 
 .pricing-head .location {
@@ -1049,6 +1023,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: var(--bs-gray);
 }
 
 .pricing-list li a.btn {
@@ -1057,3 +1032,184 @@ select {
 }
 
 /* ! Pricing end */
+
+
+/** ------------------------------------------------------ */
+
+
+/* ! Download start */
+
+.download {
+    position: relative;
+    overflow: hidden;
+}
+
+.download.bd-bottom {
+    border-bottom: 1px solid var(--bs-light);
+}
+
+.download.padding {
+    padding: 100px 0;
+}
+
+.download-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+}
+
+.download h4 {
+    color: var(--bs-orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.download h2 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    display: block;
+}
+
+.download p {
+    margin-bottom: 0;
+}
+
+.app-feature {
+    margin-top: 20px;
+}
+
+.app-feature li:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+.app-feature li {
+    display: inline-block;
+    align-items: center;
+}
+
+.app-feature li .feature-icon {
+    width: 40px;
+    margin-bottom: 10px;
+    font-size: 60px;
+    color: var(--bs-white);
+}
+
+.app-feature li h3 {
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 0;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.download-btn a {
+    width: 170px;
+}
+
+.taxi-holder {
+    background-image: url(../../images/taxi-background.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    width: 100%;
+    min-height: 550px;
+    position: absolute;
+    right: 40px;
+    top: 100px;
+    z-index: -1;
+}
+
+
+.taxi-holder .taxi {
+    background-image: url(../../images/taxi.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    width: 650px;
+    height: 100%;
+    position: absolute;
+    right: 75px;
+    top: 80px;
+}
+
+.taxi-holder .mockup {
+    background-image: url(../../images/mockup.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    right: 330px;
+    top: -120px;
+    z-index: -1;
+}
+
+.taxi-holder .charecter {
+    background-image: url(../../images/charecter.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    width: 180px;
+    height: 100%;
+    position: absolute;
+    right: 130px;
+    top: 80px;
+}
+
+.location-marker {
+    position: absolute;
+    right: 17%;
+    top: 20px;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ! Download end */
