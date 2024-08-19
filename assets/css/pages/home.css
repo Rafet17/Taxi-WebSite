@@ -1220,15 +1220,15 @@ select {
 
 /* ! Testimonials start */
 
-.testimonial{
+.testimonial {
     position: relative;
 }
 
-.testimonial.bg-grey{
-    background-color: #F4F5F8;  
+.testimonial.bg-grey {
+    background-color: #F4F5F8;
 }
 
-.testimonial::before{
+.testimonial::before {
     background-image: url(../../images/map.png);
     background-repeat: no-repeat;
     background-position: top center;
@@ -1241,18 +1241,18 @@ select {
     top: 40px;
 }
 
-.testimonial .wrapper{
-    align-items: center !important; 
+.testimonial .wrapper {
+    align-items: center !important;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
 }
 
-.testimonial-heading.mb-10{
+.testimonial-heading.mb-10 {
     margin-bottom: 10px;
 }
 
-.testimonial-heading h4{
+.testimonial-heading h4 {
     color: var(--bs-orange);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1272,7 +1272,7 @@ select {
     margin-bottom: 0;
 }
 
-.testi-items{
+.testi-items {
     padding-top: 1rem;
 }
 
@@ -1344,7 +1344,7 @@ select {
     margin-left: 40px;
 }
 
-.feature-heading{
+.feature-heading {
     margin-bottom: 30px;
 }
 
@@ -1355,7 +1355,7 @@ select {
     align-items: center;
 }
 
-.feature-heading h4.white{
+.feature-heading h4.white {
     color: var(--bs-white);
 }
 
@@ -1400,13 +1400,14 @@ select {
     display: block;
 }
 
-.feature-heading h2.white{
+.feature-heading h2.white {
     color: var(--bs-white);
 }
 
 .feature-heading p.white {
     color: #fafafa;
 }
+
 .feature-heading p {
     margin-bottom: 0;
 }
@@ -1520,4 +1521,150 @@ select {
 /** ------------------------------------------------------ */
 
 
+/* ! Blog start */
 
+.blog.bg-grey {
+    background-color: #F4F5F8;
+}
+
+.blog.padding {
+    padding: 100px 0;
+}
+
+.blog-heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.blog-heading h4 {
+    font-size: 16px;
+    color: var(--bs-orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.blog-heading h2 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    display: block;
+}
+
+.blog-heading p {
+    margin-bottom: 0;
+}
+
+.post-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.post-card {
+    background-color: var(--bs-white);
+    border: 1px solid var(--bs-light);
+    box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+}
+
+.post-card .post-thumb {
+    position: relative;
+}
+
+.post-category {
+    background-color: var(--bs-orange);
+    clip-path: polygon(85% 0%, 100% 30%, 100% 100%, 0 100%, 0 0);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--bs-white);
+    height: 35px;
+    line-height: 37px;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.post-content-wrap {
+    padding: 30px;
+}
+
+.post-meta {
+    margin-bottom: 10px;
+}
+
+.post-meta li:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.post-meta li {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--bs-gray);
+    display: inline-flex;
+    align-items: center;
+}
+
+.post-meta li i {
+    color: var(--bs-orange);
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.post-card .post-content h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: var(--bs-dark);
+    letter-spacing: -0.5px;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.post-card .post-content h3 a {
+    background: linear-gradient(var(--bs-orange) 0%, var(--bs-orange) 98%);
+    background-size: 0 3px;
+    background-repeat: no-repeat;
+    background-position: left 100%;
+    transition: background-size 0.5s ease;
+}
+
+.post-card .post-content h3 a:hover {
+    background-size: 100% 3px;
+}
+
+.post-card .post-content .read-more {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--bs-gray);
+    position: relative;
+    padding-left: 30px;
+}
+
+.post-card .post-content .read-more:before {
+    background-color: var(--bs-orange);
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    left: 0;
+    top: calc(50% - 1px);
+}
+
+/* ! Blog end */
+
+
+/** ------------------------------------------------------ */
