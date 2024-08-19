@@ -241,6 +241,19 @@ let swiperCards = new Swiper('.mySwiper', {
     }
 });
 
+
+let swiperNewCards = new Swiper('.testimonialSwiper', {
+    slidesPerView: 1,
+    loop: true,
+    grabCursor: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
 //*----------------SWIPER END----------------/
 
 

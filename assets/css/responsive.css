@@ -228,23 +228,93 @@
 
 /** Download Media Queries start */
 
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
 
     .download.padding {
         padding: 50px 15px;
     }
 
-    .download h2{
+    .download h2 {
         font-size: 24px;
         line-height: normal;
     }
 
-    .taxi-holder{
+    .taxi-holder {
         display: none;
     }
 }
 
 /** Download Media Queries end */
+
+
+/* !------------------------------------------------------ */
+
+
+/** Testimonial Media Queries start */
+
+@media screen and (max-width:900px) {
+    .testimonial {
+        padding: 0 15px;
+    }
+
+    .testimonial .wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    .testimonial-heading p {
+        margin-bottom: 0;
+    }
+
+    .testi-items {
+        width: 335px;
+    }
+
+    .feature-wrapper {
+        margin-left: 0;
+        padding: 50px;
+    }
+
+    .feature-heading h2 {
+        font-size: 24px;
+        line-height: normal;
+    }
+}
+
+/** Testimonial Media Queries end */
+
+
+
+/* !------------------------------------------------------ */
+
+
+
+/** CTA Media Queries start */
+
+@media screen and (max-width:900px) {
+    .cta-content h2 {
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    .cta-men {
+        display: none;
+    }
+
+    .cta {
+        clip-path: none;
+        margin-top: 40px;
+    }
+}
+
+/** CTA Media Queries end */
+
 
 
 /* !------------------------------------------------------ */

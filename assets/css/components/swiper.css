@@ -77,4 +77,20 @@
     .swiper-pagination{
         top: 95%;
     }
+
+    .swiper-pagination.testimonial-pagination{
+        top: 92%;
+    }
+}
+
+
+
+.swiper.testimonialSwiper {
+    width: 100%; 
+    max-width: 600px;
+}
+
+.testi-item {
+    width: 100%; 
+    box-sizing: border-box; 
 }
