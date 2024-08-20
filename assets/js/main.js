@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const observer = new MutationObserver((mutationsList, observer) => {
     for (let mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            
+
             if (document.querySelector(".sticky-header")) {
                 observer.disconnect(); // 
             }
@@ -125,6 +125,11 @@ function animation() {
     const t2 = gsap.timeline({ defaults: { ease: Expo.InOut } });
     const t3 = gsap.timeline({ defaults: { ease: Expo.InOut } });
     const t4 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+    const t5 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+    const t6 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+    const t7 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+    const t8 = gsap.timeline({ defaults: { ease: Expo.InOut } });
+    const t9 = gsap.timeline({ defaults: { ease: Expo.InOut } });
 
     if (window.matchMedia("(max-width: 900px)").matches) {
 
@@ -140,10 +145,17 @@ function animation() {
 
 
         //! About mobile animations/
-        t2.fromTo(".about-img1", 1.5, { x: "-6rem", opacity: 0 }, { x: 0, opacity: 1 });
-        t2.fromTo(".about-img2", 1, { y: "5rem", opacity: 0 }, { y: 0, opacity: 1 });
-        t2.fromTo(".about-heading", 1, { x: "5rem", opacity: 0 }, { x: 0, opacity: 1 });
+        t2.fromTo(".about-img1", 1, { x: "-6rem", opacity: 0 }, { x: 0, opacity: 1 });
+        t2.fromTo(".about-img2", 1, { y: "5rem", opacity: 0 }, { y: 0, opacity: 1 }, "-=1");
+        t2.fromTo(".about-heading", 1, { x: "5rem", opacity: 0 }, { x: 0, opacity: 1 }, "-=1");
         t2.fromTo(".about-info-text", 1.5, { x: "5rem", opacity: 0 }, { x: 0, opacity: 1 });
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "#about",
+            triggerHook: 0.5,
+            reverse: false
+        }).setTween(t2).addTo(controller);
 
 
         //! Service mobile animations/
@@ -156,6 +168,51 @@ function animation() {
             reverse: false
         }).setTween(t3).addTo(controller);
 
+
+
+        //! Pricing mobile animations/
+        t5.fromTo(".pricing-heading", 1, { y: "5rem", opacity: 0 }, { y: 0, opacity: 1 });
+
+        new ScrollMagic.Scene({
+            triggerElement: "#pricing",
+            triggerHook: 0.7,
+            reverse: false
+        }).setTween(t5).addTo(controller);
+
+
+        //! Download mobile animations/
+        t6.fromTo(".download-heading", 1, {x:"-8rem", opacity:0}, {x:0, opacity:1});
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "#download",
+            triggerHook: 0.6,
+            reverse: false
+        }).setTween(t6).addTo(controller);
+
+
+        //! Testimonials mobile animations/
+        t7.fromTo(".feature-heading", 1, {x:"8rem", opacity:0}, {x:0, opacity:1});
+        t7.fromTo(".ridek-features li", 1.3, {x:"8rem", opacity:0}, {x:0, opacity:1, stagger: 0.2},"-=1");
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "#testimonial",
+            triggerHook: 0.7,
+            reverse: false
+        }).setTween(t7).addTo(controller);
+
+
+        //! Blog mobile animations/
+        t9.fromTo(".blog-heading", 1, { y: "5rem", opacity: 0 }, { y: 0, opacity: 1 });
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "#blog",
+            triggerHook: 0.7,
+            reverse: false
+        }).setTween(t9).addTo(controller);
+       
     }
     else {
         t1.fromTo(".car-holder img", 1, { x: "25rem" }, { x: 0 });
@@ -197,13 +254,77 @@ function animation() {
 
 
         //! Booking animations/
-        t4.fromTo(".booking-car", 1, {x:"-8rem", opacity:0}, {x:0, opacity:1})
+        t4.fromTo(".booking-car", 1, { x: "-8rem", opacity: 0 }, { x: 0, opacity: 1 })
 
         new ScrollMagic.Scene({
             triggerElement: "#booking",
             triggerHook: 0.5,
             reverse: false
         }).setTween(t4).addTo(controller);
+
+
+
+
+        //! Pricing animations/
+        t5.fromTo(".pricing-heading", 1, { y: "5rem", opacity: 0 }, { y: 0, opacity: 1 });
+
+        new ScrollMagic.Scene({
+            triggerElement: "#pricing",
+            triggerHook: 0.7,
+            reverse: false
+        }).setTween(t5).addTo(controller);
+
+
+
+        //! Download animations/
+        t6.fromTo(".download-heading", 1, {x:"-8rem", opacity:0}, {x:0, opacity:1});
+        t6.fromTo(".taxi", 1, {x:"-8rem", opacity:0}, {x:0, opacity:1},"-=1");
+        t6.fromTo(".mockup", 1, { y: "5rem", opacity: 0 }, { y: 0, opacity: 1 },"-=1");
+        t6.fromTo(".charecter", 1, {x:"8rem", opacity:0}, {x:0, opacity:1},"-=1");
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "#download",
+            triggerHook: 0.5,
+            reverse: false
+        }).setTween(t6).addTo(controller);
+
+
+
+        //! Testimonials animations/
+        t7.fromTo(".feature-heading", 1, {x:"8rem", opacity:0}, {x:0, opacity:1});
+        t7.fromTo(".ridek-features li", 1.3, {x:"8rem", opacity:0}, {x:0, opacity:1, stagger: 0.2},"-=1");
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "#testimonial",
+            triggerHook: 0.7,
+            reverse: false
+        }).setTween(t7).addTo(controller);
+
+
+
+        //! CTA animations/
+        t8.fromTo(".cta-men", 1, { y: "6rem", opacity: 0 }, { y: 0, opacity: 1 });
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "#cta",
+            triggerHook: 0.5,
+            reverse: false
+        }).setTween(t8).addTo(controller);
+
+        
+
+        //! Blog animations/
+        t9.fromTo(".blog-heading", 1, { y: "5rem", opacity: 0 }, { y: 0, opacity: 1 });
+
+
+        new ScrollMagic.Scene({
+            triggerElement: "#blog",
+            triggerHook: 0.7,
+            reverse: false
+        }).setTween(t9).addTo(controller);
 
     }
 }
@@ -255,14 +376,6 @@ let swiperNewCards = new Swiper('.testimonialSwiper', {
 });
 
 //*----------------SWIPER END----------------/
-
-
-
-
-
-
-
-
 
 
 
